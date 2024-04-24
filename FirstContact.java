@@ -2,11 +2,11 @@ package info2;
 
 public class FirstContact {
     public static int add(int a, int b) {
-        return a + b
+        return a + b;
     }
 
     public static int subtract(int a, int b) {
-        return a + b;
+        return a - b;
     }
 
     public static int multiply(int a, int b) {
@@ -14,7 +14,12 @@ public class FirstContact {
     }
 
     public static double divide(int a, int b) {
-        return 0;
+        if (b == 0) {
+            System.out.println("No dividing by zero!");
+            return 0;
+        } else {
+            return a / (float)b;
+        }
     }
 
     public static void main(String[] args) {
