@@ -1,4 +1,5 @@
 package info2;
+
 //Peter Brederlow, Ulrike Hunfeld
 public class Series {
     // Exercise Task
@@ -75,10 +76,10 @@ public class Series {
     // 1.5 e)
     public static int factorial(int n) {
         int result = 1;
-        if (n == 0){
+        if (n == 0) {
             return 1;
         } else {
-            while (n != 0){
+            while (n != 0) {
                 result = result * n;
                 n--;
             }
@@ -104,7 +105,7 @@ public class Series {
     public static void reverseDigits(int n) {
         String s = Integer.toString(n);
         String r = "";
-        for (int i = s.length()-1; i >= 0; i--){
+        for (int i = s.length() - 1; i >= 0; i--) {
             System.out.println(s.charAt(i));
         }
     }
@@ -113,14 +114,14 @@ public class Series {
     // 1.8 h)
     public static double leibnizSeries(int n) {
         double res = 0;
-        for (int i = 0; i < n; i++){
-           if (i %2 == 0){
-               res += 1/((double)2*i+1);
-           } else {
-               res += (-1)/((double)2*i+1);
-           }
+        for (int i = 0; i <= n; i++) {
+            if (i % 2 == 0) {
+                res += 1 / ((double) 2 * i + 1);
+            } else {
+                res += (-1) / ((double) 2 * i + 1);
+            }
         }
-        return 4*res;
+        return 4 * res;
     }
 
     public static void main(String[] args) {
@@ -147,7 +148,7 @@ public class Series {
         reverseDigits(1239);
 
         System.out.println("1.8 h) ");
-        System.out.println(leibnizSeries(3));
+        System.out.println(leibnizSeries(1000));
 
     }
 }
